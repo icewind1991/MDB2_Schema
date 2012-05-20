@@ -647,6 +647,8 @@ class MDB2_Schema extends PEAR
 
         }
 
+        $database_definition['tables'][$table_name]=$table_definition;
+
         $sequences = $this->db->manager->listSequences();
         if (PEAR::isError($sequences)) {
             return $sequences;
